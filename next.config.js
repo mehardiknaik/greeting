@@ -2,8 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  basePath: '/greeting',
-  assetPrefix:  "/greeting/",
 
 }
 

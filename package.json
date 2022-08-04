@@ -1,6 +1,5 @@
 {
   "name": "greeting",
-  "homepage": "https://mehardiknaik.github.io/greeting/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
