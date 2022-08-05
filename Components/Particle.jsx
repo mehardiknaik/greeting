@@ -21,27 +21,60 @@ function Particle() {
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
-        background: {
-          color: {
-            value: "transparent",
-          },
+        fullScreen: {
+          enable: true,
+          zIndex: 1,
         },
+        detectRetina: true,
         fpsLimit: 120,
         interactivity: {
           events: {
             onClick: {
               enable: true,
-              //   mode: "push",
+              // mode: "push",
+            },
+            onDiv: {
+              elementId: "repulse-div",
+              enable: false,
+              mode: "repulse",
             },
             onHover: {
               enable: true,
-              mode: "repulse",
+              mode: "connect",
+              parallax: {
+                enable: false,
+                force: 60,
+                smooth: 10,
+              },
             },
             resize: true,
           },
           modes: {
+            bubble: {
+              distance: 400,
+              duration: 2,
+              opacity: 0.8,
+              size: 3,
+              speed: 3,
+            },
+            connect: {
+              distance: 80,
+              lineLinked: {
+                opacity: 0.5,
+              },
+              radius: 60,
+            },
+            grab: {
+              distance: 400,
+              lineLinked: {
+                opacity: 1,
+              },
+            },
             push: {
               quantity: 4,
+            },
+            remove: {
+              quantity: 2,
             },
             repulse: {
               distance: 200,
@@ -51,26 +84,31 @@ function Particle() {
         },
         particles: {
           color: {
-            value: "#800080",
+            value: "random",
           },
-          links: {
-            color: "#800080",
+          lineLinked: {
+            blink: false,
+            color: "#ffffff",
+            consent: false,
             distance: 150,
-            enable: true,
-            opacity: 0.5,
+            enable: false,
+            opacity: 0.4,
             width: 1,
           },
-          collisions: {
-            enable: true,
-          },
           move: {
+            attract: {
+              enable: false,
+              rotate: {
+                x: 600,
+                y: 1200,
+              },
+            },
+            bounce: false,
             direction: "none",
             enable: true,
-            outModes: {
-              default: "bounce",
-            },
+            outMode: "out",
             random: false,
-            speed: 4,
+            speed: 6,
             straight: false,
           },
           number: {
@@ -78,19 +116,49 @@ function Particle() {
               enable: true,
               area: 800,
             },
-            value: 50,
+            limit: 500,
+            value: 90,
           },
           opacity: {
+            animation: {
+              enable: false,
+              minimumValue: 0.1,
+              speed: 1,
+              sync: false,
+            },
+            random: false,
             value: 0.5,
           },
           shape: {
             type: "circle",
           },
           size: {
-            value: { min: 1, max: 5 },
+            animation: {
+              enable: false,
+              minimumValue: 0.1,
+              speed: 40,
+              sync: false,
+            },
+            random: {
+              enable: true,
+              minimumValue: 10,
+            },
+            value: 15,
           },
         },
-        detectRetina: true,
+        polygon: {
+          draw: {
+            enable: false,
+            lineColor: "#ffffff",
+            lineWidth: 0.5,
+          },
+          move: {
+            radius: 10,
+          },
+          scale: 1,
+          type: "none",
+          url: "",
+        },
       }}
     />
   );
