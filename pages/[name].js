@@ -9,7 +9,7 @@ function Main({name}) {
         <title>{name}</title>
       </Head>
       <Particle/>
-      <div>{name} lazy Ahe...</div>
+      <div>{name} {name?.toLowerCase()==="hardik"?"lazy":'pagal'} Ahe...</div>
     </>
   );
 }
