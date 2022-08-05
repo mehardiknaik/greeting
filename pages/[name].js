@@ -2,20 +2,25 @@ import React from "react";
 import Head from "next/head";
 import Particle from "../Components/Particle";
 
-function Main({name}) {
+function Main({ name }) {
   return (
     <>
       <Head>
         <title>{name}</title>
       </Head>
-      <Particle/>
-      <div>{name} {name?.toLowerCase()==="hardik"?"lazy":'pagal'} Ahe...</div>
+      <Particle />
+      <div>
+        {name} {name?.toLowerCase() === "hardik" ? "lazy" : "pagal"} Ahe...
+      </div>
     </>
   );
 }
 
 export function getStaticPaths() {
-  return { paths: [{ params: { name: "Hardik" } },{ params: { name: "Sharyu" } }], fallback: true };
+  return {
+    paths: [{ params: { name: "Hardik" } }, { params: { name: "Sharyu" } }],
+    fallback: true,
+  };
 }
 
 export function getStaticProps({ params }) {

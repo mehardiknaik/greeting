@@ -1,7 +1,15 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Main from "./[name]";
+import Link from "next/link";
 
 export default function Home() {
-  return <div>dsvsd</div>;
+  return (
+    <>
+      {data.map((e) => (
+        <div><Link href={`/${e}`}>{e}</Link></div>
+      ))}
+    </>
+  );
 }
+
+const data = ["Hardik", "Sharyu"];
