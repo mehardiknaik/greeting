@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <>
       {data.map((e) => (
-        <div><Link key={e} href={`/${e}`}>{e}</Link></div>
+        <div key={e}>
+          <Link href={`/${e}`}>{e}</Link>
+        </div>
       ))}
     </>
   );
