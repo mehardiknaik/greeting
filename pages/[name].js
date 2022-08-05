@@ -10,7 +10,13 @@ function Main({ name }) {
       </Head>
       <Particle />
       <div>
-        {name} {name?.toLowerCase() === "hardik" ? "lazy" : "pagal"} Ahe...
+        {name}{" "}
+        {name?.toLowerCase() === "hardik"
+          ? "lazy"
+          : name?.toLowerCase() === "uvya" || name?.toLowerCase() === "sharyu"
+          ? "pagal"
+          : "hushar"}{" "}
+        Ahe...
       </div>
     </>
   );
@@ -19,7 +25,7 @@ function Main({ name }) {
 export function getStaticPaths() {
   return {
     paths: [{ params: { name: "Hardik" } }, { params: { name: "Sharyu" } }],
-    fallback: true,
+    fallback: 'blocking',
   };
 }
 
