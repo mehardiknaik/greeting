@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Particle from "../Components/Particle";
 
 function Main({name}) {
   return (
@@ -7,6 +8,7 @@ function Main({name}) {
       <Head>
         <title>{name}</title>
       </Head>
+      <Particle/>
       <div>{name} lazy Ahe...</div>
     </>
   );
