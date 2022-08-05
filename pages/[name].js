@@ -1,27 +1,24 @@
 import React from "react";
 import Head from "next/head";
 
-export async function getStaticPaths() {
-  return { paths: [], fallback: true };
+function Main({name}) {
+  return (
+    <>
+      <Head>
+        <title>{name}</title>
+      </Head>
+      <div>{name} lazy Ahe...</div>
+    </>
+  );
 }
 
-export async function getStaticProps({ params }) {
+export function getStaticPaths() {
+  return { paths: [{ params: { name: "Hardik" } },{ params: { name: "Sharyu" } }], fallback: true };
+}
+
+export function getStaticProps({ params }) {
   const { name } = params;
-
-  try {
-    return { props: { name } };
-  } catch (error) {
-    console.error(error);
-    return { notFound: true };
-  }
+  return { props: { name } };
 }
 
-export default function Main({ name }) {
-  return     <>
-  {" "}
-  <Head>
-    <title>{name}</title>
-  </Head>
-  <div>{name} lazy Ahe...</div>
-</>
-}
+export default Main;
