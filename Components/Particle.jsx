@@ -1,29 +1,29 @@
-import React from 'react'
+import React from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
 function Particle() {
-    const particlesInit = async (main) => {
-        console.log(main);
-    
-        // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-        // starting from v2 you can add only the features you need reducing the bundle size
-        await loadFull(main);
-      };
-    
-      const particlesLoaded = (container) => {
-        console.log(container);
-      };
-      return (
-        <Particles
+  const particlesInit = async (main) => {
+    console.log(main);
+
+    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    await loadFull(main);
+  };
+
+  const particlesLoaded = (container) => {
+    console.log(container);
+  };
+  return (
+    <Particles
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
         background: {
           color: {
-            // value: "#0d47a1",
+            value: "transparent",
           },
         },
         fpsLimit: 120,
@@ -31,7 +31,7 @@ function Particle() {
           events: {
             onClick: {
               enable: true,
-              mode: "push",
+              //   mode: "push",
             },
             onHover: {
               enable: true,
@@ -51,10 +51,10 @@ function Particle() {
         },
         particles: {
           color: {
-            value: "#0d47a1",
+            value: "#800080",
           },
           links: {
-            color: "#0d47a1",
+            color: "#800080",
             distance: 150,
             enable: true,
             opacity: 0.5,
@@ -70,7 +70,7 @@ function Particle() {
               default: "bounce",
             },
             random: false,
-            speed: 6,
+            speed: 4,
             straight: false,
           },
           number: {
@@ -78,7 +78,7 @@ function Particle() {
               enable: true,
               area: 800,
             },
-            value: 80,
+            value: 50,
           },
           opacity: {
             value: 0.5,
@@ -93,7 +93,7 @@ function Particle() {
         detectRetina: true,
       }}
     />
-      );
+  );
 }
 
-export default Particle
+export default Particle;
