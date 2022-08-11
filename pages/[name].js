@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Particle from "../Components/Particle";
+import styles from "../styles/Home.module.css";
 
 function Main({ name }) {
   return (
@@ -10,13 +11,7 @@ function Main({ name }) {
       </Head>
       <Particle />
       <div>
-        {name}{" "}
-        {name?.toLowerCase() === "hardik"
-          ? "lazy"
-          : name?.toLowerCase() === "uvya" || name?.toLowerCase() === "sharyu"
-          ? "pagal"
-          : "hushar"}{" "}
-        Ahe...
+        Sorrryyy {name}
       </div>
     </>
   );
