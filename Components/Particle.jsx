@@ -1,7 +1,7 @@
 import React from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import particleOption from "../particle.json";
+import particleOption from "../particleOption.js";
 
 function Particle() {
   const particlesInit = async (main) => {
