@@ -10,8 +10,8 @@ function Main({ name }) {
         <title>{name}</title>
       </Head>
       <Particle />
-      <div className={styles.main}>>
-        Sorrryyy {name}
+      <div className={styles.main}>
+        <div>Sorrryyy {name}</div>
       </div>
     </>
   );
