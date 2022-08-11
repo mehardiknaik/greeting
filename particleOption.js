@@ -1,4 +1,4 @@
-export default particleOption = {
+export particleOption = {
         fullScreen: {
           enable: true,
           zIndex: 1,
