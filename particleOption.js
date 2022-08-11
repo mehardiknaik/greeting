@@ -158,4 +158,3 @@ export particleOption = {
           url: "",
         },
       }}
-      option
