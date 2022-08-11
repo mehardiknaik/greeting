@@ -1,4 +1,4 @@
-export particleOption = {
+export particleOption ={
         fullScreen: {
           enable: true,
           zIndex: 1,
@@ -157,6 +157,4 @@ export particleOption = {
           type: "none",
           url: "",
         },
-}
-}
-
+      }
