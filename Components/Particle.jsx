@@ -131,15 +131,7 @@ function Particle() {
           },
           shape: {
             type: [
-                "circle",
-                "square",
-                "polygon",
                 "character",
-                "character",
-                "character",
-                "image",
-                "image",
-                "image"
             ],
             options: {
                 polygon: [
@@ -158,18 +150,6 @@ function Particle() {
                         weight: 400
                     }
                 ],
-                image: [
-                    {
-                        src: "https://particles.js.org/images/fruits/watermelon_slice.png",
-                        width: 32,
-                        height: 32,
-                        particles: {
-                            size: {
-                                value: 16
-                            }
-                        }
-                    }
-                ]
             }
         },
           size: {
