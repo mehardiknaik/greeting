@@ -3,11 +3,28 @@
 }
 
 .main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+  display: flex;
+  color: white;
+  text-transform: capitalize;
+}
+.wrapper{
+  z-index: 1;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center
+}
+
+.greet{
+  font-size: 1.5rem;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #FF9933, #FFFFFF, #0fad00 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
 }

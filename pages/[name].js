@@ -11,7 +11,10 @@ function Main({ name }) {
       </Head>
       <Particle />
       <div className={styles.main}>
-        <div>Sorrryyy {name}</div>
+        <div className={styles.wrapper}>
+          <div className={styles.greet}>happy independence day</div>
+          <div className={styles.name}>{name.toLowerCase()}</div>
+        </div>
       </div>
     </>
   );
@@ -20,7 +23,7 @@ function Main({ name }) {
 export function getStaticPaths() {
   return {
     paths: [{ params: { name: "Hardik" } }, { params: { name: "Sharyu" } }],
-    fallback: 'blocking',
+    fallback: "blocking",
   };
 }
 
