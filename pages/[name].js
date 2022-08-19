@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Particle from "../Components/Particle";
 import styles from "../styles/Home.module.css";
+import TiltWidget from "../Components/TiltWidget";
 
 function Main({ name }) {
   return (
@@ -9,12 +10,12 @@ function Main({ name }) {
       <Head>
         <title>{name}</title>
       </Head>
-      <Particle />
-      <div className={styles.main}>
-        <div className={styles.wrapper}>
+      <div className={styles.main} >
+        {/* <div className={styles.wrapper}>
           <div className={styles.greet}>happy independence day</div>
           <div className={styles.name}>{name.toLowerCase()}</div>
-        </div>
+        </div> */}
+        <TiltWidget name={name}/>
       </div>
     </>
   );
