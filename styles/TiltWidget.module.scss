@@ -1,5 +1,3 @@
-
-
 .parallaxEffect {
   display: flex;
   flex-direction: column;
@@ -14,13 +12,28 @@
 
   transform-style: preserve-3d;
 }
+
 .innerElement {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 35px;
-    font-style: italic;
-    color: #0006ff;
-    transform: translateZ(60px);
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  font-style: italic;
+  color: #0006ff;
+  transform: translateZ(60px);
+}
+
+.innerElement2 {
+  font-size: 35px;
+  font-style: italic;
+  transform: translateZ(40px);
+  color: #00ff2a;
+}
+
+.innerElement3 {
+  font-size: 35px;
+  font-style: italic;
+  transform: translateZ(32px);
+  color: #e100ff;
+}
