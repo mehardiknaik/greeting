@@ -9,6 +9,7 @@ function Main({ name }) {
     <>
       <Head>
         <title>{name}</title>
+        <meta name="description" content={`This Website created by HarDik for ${name}`} />
       </Head>
       <div className={styles.main} >
         {/* <div className={styles.wrapper}>
