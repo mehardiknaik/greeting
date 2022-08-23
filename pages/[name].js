@@ -1,10 +1,16 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Head from "next/head";
 import Particle from "../Components/Particle";
 import styles from "../styles/Home.module.css";
 import TiltWidget from "../Components/TiltWidget";
 
 function Main({ name }) {
+
+useEffect(()=>{
+if('vibrate' in navigator)
+navigator.vibrate([10,0,10])
+},[])
+
   return (
     <>
       <Head>
