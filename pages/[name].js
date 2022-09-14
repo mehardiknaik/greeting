@@ -9,7 +9,7 @@ function Main({ name }) {
 useEffect(()=>{
 if('vibrate' in navigator)
 navigator.vibrate([10,0,10])
-},[name])
+},[])
 
   return (
     <>
@@ -37,7 +37,7 @@ export function getStaticPaths() {
 
 export function getStaticProps({ params }) {
   const { name } = params;
-  return { props: { name } };
+  return { props: { name,key: name } };
 }
 
 export default Main;
