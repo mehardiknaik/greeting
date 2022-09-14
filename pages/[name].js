@@ -9,7 +9,7 @@ function Main({ name }) {
 useEffect(()=>{
 if('vibrate' in navigator)
 navigator.vibrate([10,0,10])
-},[])
+},[name])
 
   return (
     <>
