@@ -23,6 +23,7 @@ navigator.vibrate([10,0,10])
           <div className={styles.name}>{name.toLowerCase()}</div>
         </div> */}
         <TiltWidget name={name}/>
+  <Particle/>
       </div>
     </>
   );
