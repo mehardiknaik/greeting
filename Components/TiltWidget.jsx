@@ -13,9 +13,9 @@ const TiltWidget = ({ name }) => {
       tiltAngleYInitial={0}
       className={styles.parallaxEffect}
     >
-      <div className={styles.innerElement}>Lazy</div>
+      <div className={styles.innerElement}>Congratulations</div>
       <div className={styles.innerElement2}>{name}</div>
-      <div className={styles.innerElement3}>🐌</div>
+      <div className={styles.innerElement3}>🎉</div>
     </Tilt>
   );
 };
